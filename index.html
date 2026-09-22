@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miúdo Suspensões | Suspensão e Rebaixados em Ribeirão Pires</title>
+<meta name="description" content="Miúdo Suspensões em Ribeirão Pires. Especialista em suspensão a ar, rosca, fixa, suspensão original, importadas, ponta de eixo e projetos especiais.">
+
+<meta property="og:title" content="Miúdo Suspensões | Suspensão e Rebaixados em Ribeirão Pires">
+<meta property="og:description" content="Especialistas em suspensões, rebaixados e projetos especiais em Ribeirão Pires - SP.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="imagens/imagem-1.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --black: #0a0a0b;
+    --graphite: #17181a;
+    --graphite-2: #212226;
+    --line: #313236;
+    --steel: #9a9da3;
+    --steel-dim: #6c6e73;
+    --white: #f2f2f0;
+    --red: #b3241a;
+    --red-bright: #d92e1f;
+    --radius: 2px;
+    --ease: cubic-bezier(.22,.8,.28,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Manrope',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;height:auto;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit;border:none;background:none;cursor:pointer;}
+
+  h1,h2,h3,.display{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    line-height:1.05;
+    letter-spacing:.01em;
+    font-weight:600;
+  }
+
+  .wrap{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .eyebrow{
+    font-family:'Oswald',sans-serif;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    color:var(--steel);
+    font-weight:500;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 30px;
+    font-family:'Oswald',sans-serif;
+    font-size:.92rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-weight:600;
+    border-radius:var(--radius);
+    transition:transform .35s var(--ease), background .3s ease, border-color .3s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--red);
+    color:var(--white);
+  }
+  .btn-primary:hover{background:var(--red-bright); transform:translateY(-2px);}
+  .btn-outline{
+    border:1px solid rgba(242,242,240,.28);
+    color:var(--white);
+  }
+  .btn-outline:hover{border-color:var(--white); transform:translateY(-2px);}
+  .btn-ghost{
+    border:1px solid var(--line);
+    color:var(--steel);
+  }
+  .btn-ghost:hover{color:var(--white); border-color:var(--steel);}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1!important; transform:none!important; transition:none!important;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ============ HEADER ============ */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:500;
+    padding:22px 0;
+    transition:padding .35s var(--ease), background .35s ease, border-color .35s ease;
+    border-bottom:1px solid transparent;
+  }
+  header.scrolled{
+    padding:14px 0;
+    background:rgba(10,10,11,.78);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{display:flex; align-items:center; justify-content:space-between; gap:24px;}
+  .logo{
+    font-family:'Oswald',sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:.06em;
+    line-height:1.05;
+  }
+  .logo span{display:block; color:var(--steel); font-size:.62em; letter-spacing:.22em; font-weight:400;}
+  nav.main-nav{display:flex; align-items:center; gap:40px;}
+  nav.main-nav ul{display:flex; gap:32px;}
+  nav.main-nav a{
+    font-size:.88rem; color:var(--steel);
+    transition:color .25s ease;
+    position:relative;
+  }
+  nav.main-nav a:hover{color:var(--white);}
+  .header-cta{display:flex; align-items:center; gap:18px;}
+  .hamburger{display:none; flex-direction:column; gap:5px; width:26px; z-index:600;}
+  .hamburger span{display:block; height:2px; background:var(--white); transition:transform .3s ease, opacity .3s ease;}
+
+  .mobile-nav{
+    position:fixed; inset:0; background:var(--black); z-index:490;
+    display:flex; flex-direction:column; justify-content:center; padding:40px 32px;
+    transform:translateX(100%); transition:transform .45s var(--ease);
+  }
+  .mobile-nav.open{transform:translateX(0);}
+  .mobile-nav ul{display:flex; flex-direction:column; gap:26px; margin-bottom:40px;}
+  .mobile-nav a{font-family:'Oswald',sans-serif; font-size:1.6rem; text-transform:uppercase;}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    align-items:flex-end;
+    padding-top:140px;
+    padding-bottom:64px;
+    background:
+      linear-gradient(180deg, rgba(10,10,11,.55) 0%, rgba(10,10,11,.35) 40%, rgba(10,10,11,.92) 100%),
+      url('imagens/imagem-1.jpg') center 30%/cover no-repeat;
+    background-color:var(--graphite);
+  }
+  .hero-content{max-width:760px;}
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 5.2rem);
+    margin-bottom:22px;
+  }
+  .hero-sub{
+    font-size:clamp(1.05rem, 2vw, 1.3rem);
+    color:var(--white);
+    max-width:520px;
+    margin-bottom:12px;
+    font-weight:500;
+  }
+  .hero-desc{
+    font-size:.98rem;
+    color:var(--steel);
+    max-width:480px;
+    margin-bottom:36px;
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:16px; margin-bottom:48px;}
+  .hero-indicators{
+    display:flex; flex-wrap:wrap; gap:28px;
+    padding-top:26px; border-top:1px solid rgba(242,242,240,.16);
+    max-width:640px;
+  }
+  .indicator{font-family:'Oswald',sans-serif; font-size:.86rem; letter-spacing:.04em; color:var(--steel); display:flex; align-items:center; gap:8px;}
+  .indicator strong{color:var(--white); font-weight:600;}
+
+  /* ============ IMPACT BAR ============ */
+  .impact-bar{
+    background:var(--graphite);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    padding:20px 0;
+  }
+  .impact-track{
+    display:flex; gap:60px;
+    animation:scrollX 28s linear infinite;
+    width:max-content;
+  }
+  .impact-track span{
+    font-family:'Oswald',sans-serif;
+    font-size:1.05rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--steel-dim);
+    display:flex; align-items:center; gap:60px;
+  }
+  .impact-track span::after{content:'◆'; font-size:.55rem; color:var(--red); margin-left:60px;}
+  @keyframes scrollX{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* ============ SECTION GENERIC ============ */
+  section{padding:120px 0;}
+  .section-head{max-width:680px; margin-bottom:64px;}
+  .section-head h2{font-size:clamp(1.9rem, 4vw, 3rem); margin-top:10px;}
+  .section-head p{color:var(--steel); margin-top:18px; font-size:1.02rem; max-width:520px;}
+
+  /* ============ ESPECIALISTAS ============ */
+  .especialistas{background:var(--black);}
+  .especialistas .grid-split{
+    display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+  }
+  .especialistas h2{font-size:clamp(2rem,4.2vw,3.1rem); margin-bottom:26px;}
+  .especialistas p{color:var(--steel); font-size:1.05rem; max-width:440px; margin-bottom:34px;}
+  .badge{
+    display:inline-flex; flex-direction:column; gap:2px;
+    border:1px solid var(--line); padding:16px 22px;
+  }
+  .badge b{font-family:'Oswald',sans-serif; letter-spacing:.05em; font-size:.88rem;}
+  .badge span{font-size:.76rem; color:var(--steel-dim); letter-spacing:.08em;}
+  .especialistas .img-frame{
+    position:relative; aspect-ratio:4/5; overflow:hidden; border:1px solid var(--line);
+  }
+  .especialistas .img-frame img{width:100%; height:100%; object-fit:cover; transition:transform 1.2s var(--ease);}
+  .especialistas .img-frame:hover img{transform:scale(1.045);}
+
+  /* ============ SERVICOS ============ */
+  .servicos{background:var(--graphite);}
+  .cards-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .card{
+    background:var(--graphite);
+    padding:38px 30px;
+    display:flex; flex-direction:column; gap:16px;
+    transition:background .35s ease;
+    position:relative;
+  }
+  .card:hover{background:var(--graphite-2);}
+  .card-icon{width:34px; height:34px; stroke:var(--red); fill:none; stroke-width:1.4;}
+  .card h3{font-size:1.05rem; letter-spacing:.02em;}
+  .card p{color:var(--steel); font-size:.9rem; flex-grow:1;}
+  .card-arrow{
+    display:flex; align-items:center; gap:8px;
+    font-family:'Oswald',sans-serif; font-size:.78rem; letter-spacing:.06em; color:var(--steel-dim);
+    text-transform:uppercase;
+    transition:gap .3s ease, color .3s ease;
+  }
+  .card:hover .card-arrow{gap:14px; color:var(--red-bright);}
+
+  /* ============ VISUAL IMPACT FULL ============ */
+  .visual-impact{
+    position:relative; padding:0; height:66vh; min-height:460px;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    background:
+      linear-gradient(180deg, rgba(10,10,11,.35), rgba(10,10,11,.85)),
+      url('imagens/imagem-3.jpg') center/cover no-repeat;
+    background-color:var(--graphite);
+  }
+  .visual-impact h2{font-size:clamp(2.2rem,5.4vw,4.2rem); margin-bottom:14px;}
+  .visual-impact p{color:var(--steel); margin-bottom:32px; font-size:1rem;}
+
+  /* ============ COMO FUNCIONA ============ */
+  .como-funciona{background:var(--black);}
+  .steps{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    position:relative;
+  }
+  .step{
+    padding:0 36px 0 0; position:relative; border-left:1px solid var(--line); padding-left:32px;
+  }
+  .step:first-child{border-left:none; padding-left:0;}
+  .step-num{
+    font-family:'Oswald',sans-serif; font-size:4.2rem; font-weight:700;
+    color:transparent;
+    -webkit-text-stroke:1.5px var(--steel);
+    margin-bottom:18px; display:block;
+    transition:color 1s var(--ease), -webkit-text-stroke-color 1s var(--ease);
+  }
+  .step.in .step-num{
+    color:var(--red-bright);
+    -webkit-text-stroke:1.5px var(--red-bright);
+  }
+  .step:nth-child(1){transition-delay:0s;}
+  .step:nth-child(2){transition-delay:.18s;}
+  .step:nth-child(3){transition-delay:.36s;}
+  .step h3{font-size:1.15rem; margin-bottom:12px; color:var(--white);}
+  .step p{color:var(--steel); font-size:.94rem;}
+
+  /* ============ PROJETOS STRIP ============ */
+  .projetos-strip{background:var(--graphite); padding:0;}
+  .projetos-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line);}
+  .projetos-grid a{position:relative; display:block; aspect-ratio:16/10; overflow:hidden; background:var(--black);}
+  .projetos-grid img{width:100%; height:100%; object-fit:cover; transition:transform 1s var(--ease);}
+  .projetos-grid a:hover img{transform:scale(1.06);}
+  .projetos-grid a::after{
+    content:'Ver detalhes do projeto';
+    position:absolute; left:0; right:0; bottom:0; padding:18px 22px;
+    background:linear-gradient(0deg, rgba(0,0,0,.75), transparent);
+    font-family:'Oswald',sans-serif; font-size:.8rem; letter-spacing:.05em; text-transform:uppercase; color:var(--white);
+    opacity:0; transition:opacity .3s ease;
+  }
+  .projetos-grid a:hover::after{opacity:1;}
+
+/* ============ PROVA SOCIAL / GOOGLE REVIEWS ============ */
+.prova-social{
+  background:var(--black);
+  overflow:hidden;
+}
+
+.rating-block{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  margin-bottom:38px;
+  flex-wrap:wrap;
+}
+
+.rating-score{
+  font-family:'Oswald',sans-serif;
+  font-size:3.4rem;
+  font-weight:600;
+  line-height:1;
+}
+
+.rating-meta{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.stars{
+  color:var(--red-bright);
+  font-size:1.05rem;
+  letter-spacing:2px;
+}
+
+.rating-meta span{
+  color:var(--steel);
+  font-size:.9rem;
+}
+
+/* CARROSSEL */
+.reviews-carousel{
+  position:relative;
+  width:100%;
+}
+
+.reviews-track{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  cursor:grab;
+  padding:4px 2px 18px;
+  user-select:none;
+  -webkit-overflow-scrolling:touch;
+}
+
+.reviews-track::-webkit-scrollbar{
+  display:none;
+}
+
+.reviews-track.dragging{
+  cursor:grabbing;
+  scroll-behavior:auto;
+}
+
+.review-card{
+  flex:0 0 360px;
+  min-height:235px;
+  border:1px solid var(--line);
+  padding:30px 28px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  background:var(--black);
+  transition:border-color .3s ease, transform .3s ease;
+}
+
+.review-card:hover{
+  border-color:rgba(255,255,255,.25);
+  transform:translateY(-3px);
+}
+
+.review-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.review-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.review-avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#e8eaed;
+  color:#5f6368;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,sans-serif;
+  font-size:17px;
+  font-weight:600;
+  flex-shrink:0;
+}
+
+.review-name{
+  color:var(--white);
+  font-size:.9rem;
+  font-weight:600;
+}
+
+.review-google{
+  color:var(--steel-dim);
+  font-size:.72rem;
+  margin-top:3px;
+}
+
+.review-google-logo{
+  font-family:Arial,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-2px;
+}
+
+.review-stars{
+  color:#fbbc04;
+  font-size:.9rem;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+
+.review-card .quote-mark{
+  font-family:'Oswald',sans-serif;
+  font-size:2rem;
+  color:var(--red);
+  line-height:1;
+}
+
+.review-card p{
+  color:var(--white);
+  font-size:1rem;
+  line-height:1.65;
+  flex-grow:1;
+  margin:0;
+}
+
+.review-source{
+  color:var(--steel-dim);
+  font-size:.75rem;
+}
+
+/* SETAS */
+.reviews-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:5;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(10,10,11,.92);
+  color:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:1.4rem;
+  transition:all .25s ease;
+}
+
+.reviews-arrow:hover{
+  background:var(--white);
+  color:var(--black);
+}
+
+.reviews-arrow.prev{
+  left:-22px;
+}
+
+.reviews-arrow.next{
+  right:-22px;
+}
+
+/* INDICADORES */
+.reviews-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:4px;
+}
+
+.reviews-hint{
+  color:var(--steel-dim);
+  font-size:.75rem;
+  letter-spacing:.03em;
+}
+
+.reviews-dots{
+  display:flex;
+  gap:6px;
+}
+
+.reviews-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--steel-dim);
+  transition:all .25s ease;
+}
+
+.reviews-dot.active{
+  width:20px;
+  border-radius:10px;
+  background:var(--white);
+}
+
+@media (max-width:1000px){
+  .review-card{
+    flex:0 0 330px;
+  }
+
+  .reviews-arrow.prev{
+    left:10px;
+  }
+
+  .reviews-arrow.next{
+    right:10px;
+  }
+}
+
+@media (max-width:760px){
+  .rating-block{
+    gap:18px;
+    margin-bottom:30px;
+  }
+
+  .review-card{
+    flex:0 0 82vw;
+    min-height:220px;
+    padding:26px 22px;
+  }
+
+  .reviews-arrow{
+    display:none;
+  }
+
+  .reviews-hint{
+    font-size:.7rem;
+  }
+}
+
+  /* ============ INSTAGRAM ============ */
+  .instagram{background:var(--graphite);}
+  .insta-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:44px;}
+  .insta-handle{
+    display:flex; align-items:center; gap:14px;
+    font-family:'Oswald',sans-serif; letter-spacing:.03em;
+  }
+  .insta-handle .insta-icon{width:22px; height:22px; stroke:var(--white); fill:none; stroke-width:1.5;}
+  .insta-followers{color:var(--steel-dim); font-size:.85rem; margin-left:auto;}
+  .insta-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--line);}
+  .insta-grid a{position:relative; display:block; aspect-ratio:1/1; overflow:hidden; background:var(--black);}
+  .insta-grid img{width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease), opacity .3s ease;}
+  .insta-grid a:hover img{transform:scale(1.08); opacity:.75;}
+
+  /* ============ CTA FINAL ============ */
+  .cta-final{
+    position:relative;
+    padding:150px 0;
+    text-align:center;
+    background:
+      linear-gradient(180deg, rgba(10,10,11,.75), rgba(10,10,11,.92)),
+      url('imagens/imagem-4.jpg') center/cover no-repeat;
+    background-color:var(--graphite);
+  }
+  .cta-final h2{font-size:clamp(2.1rem,5vw,3.6rem); max-width:760px; margin:0 auto 20px;}
+  .cta-final p{color:var(--steel); max-width:480px; margin:0 auto 40px;}
+  .cta-final .phone{
+    margin-top:28px; font-family:'Oswald',sans-serif; letter-spacing:.05em; color:var(--steel);
+    font-size:1rem;
+  }
+
+  /* ============ LOCALIZAÇÃO ============ */
+  .localizacao{background:var(--black);}
+  .loc-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .loc-info address{font-style:normal; color:var(--steel); font-size:1.05rem; line-height:1.8; margin:22px 0 32px;}
+  .map-frame{border:1px solid var(--line); overflow:hidden; aspect-ratio:4/3;}
+.map-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--graphite); border-top:1px solid var(--line); padding:70px 0 30px;}
+  .footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px; margin-bottom:60px;}
+  .footer-logo{font-family:'Oswald',sans-serif; font-weight:600; font-size:1.2rem; letter-spacing:.05em; margin-bottom:16px;}
+  .footer-top p{color:var(--steel); max-width:320px; font-size:.92rem;}
+  .footer-col h4{font-family:'Oswald',sans-serif; font-size:.82rem; letter-spacing:.1em; color:var(--steel-dim); margin-bottom:18px; text-transform:uppercase;}
+  .footer-col ul{display:flex; flex-direction:column; gap:12px;}
+  .footer-col a{color:var(--steel); font-size:.92rem; transition:color .25s ease;}
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{
+    border-top:1px solid var(--line); padding-top:26px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    color:var(--steel-dim); font-size:.82rem;
+  }
+
+  /* ============ WHATSAPP FLOAT ============ */
+  .wa-float{
+    position:fixed; right:20px; bottom:20px; z-index:400;
+    width:58px; height:58px; border-radius:50%;
+    background:#1fa855;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    transition:transform .3s var(--ease);
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:28px; height:28px; fill:#fff;}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1000px){
+    .cards-grid{grid-template-columns:repeat(2,1fr);}
+    .especialistas .grid-split{grid-template-columns:1fr; gap:44px;}
+    .especialistas .img-frame{order:-1; aspect-ratio:4/3;}
+    .steps{grid-template-columns:1fr; gap:40px;}
+    .step{border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:32px;}
+    .step:first-child{border-top:none; padding-top:0;}
+    .reviews-grid{grid-template-columns:1fr; gap:20px;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+    .loc-grid{grid-template-columns:1fr;}
+    .insta-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:760px){
+    .wrap{padding:0 20px;}
+    body{font-size:15px;}
+
+    /* header */
+    header{padding:16px 0;}
+    header.scrolled{padding:12px 0;}
+    .logo{font-size:.95rem;}
+    .logo span{font-size:.6em;}
+    nav.main-nav{display:none;}
+    .header-cta .btn-primary{display:none;}
+    .hamburger{display:flex;}
+    .mobile-nav{padding:32px 24px;}
+    .mobile-nav a{font-size:1.4rem;}
+
+    /* seções */
+    section{padding:64px 0;}
+    .section-head{margin-bottom:40px;}
+    .section-head p{font-size:.95rem;}
+
+    /* hero */
+    .hero{min-height:auto; padding-top:110px!important; padding-bottom:40px; background-position:center 22%;}
+    .hero-content{max-width:100%;}
+    .hero h1{margin-bottom:16px;}
+    .hero-sub{font-size:1rem; margin-bottom:10px;}
+    .hero-desc{font-size:.92rem; margin-bottom:28px;}
+    .hero-ctas{flex-direction:column; gap:12px; margin-bottom:36px;}
+    .hero-ctas .btn{width:100%; justify-content:center;}
+    .hero-indicators{display:grid; grid-template-columns:1fr 1fr; gap:16px 20px; padding-top:20px;}
+    .hero-indicators .indicator:last-child{grid-column:1/-1;}
+
+    /* faixa de destaques */
+    .impact-track{gap:36px;}
+    .impact-track span{font-size:.78rem; gap:36px;}
+    .impact-track span::after{margin-left:36px;}
+
+    /* especialistas */
+    .especialistas .grid-split{gap:32px;}
+    .especialistas h2{margin-bottom:18px;}
+    .especialistas p{font-size:.98rem; margin-bottom:26px; max-width:100%;}
+    .badge{padding:14px 18px;}
+
+    /* serviços */
+    .cards-grid{grid-template-columns:1fr; border-left:0; border-right:0;}
+    .card{padding:28px 22px;}
+
+    /* visual impacto */
+    .visual-impact{height:auto; min-height:420px; padding:70px 0; background-position:center 35%;}
+
+    /* como funciona */
+    .steps{gap:32px;}
+    .step{padding-top:26px!important;}
+
+    /* projetos */
+    .projetos-grid{grid-template-columns:1fr;}
+
+    /* avaliações */
+    .rating-block{flex-wrap:wrap; gap:14px 18px;}
+    .rating-block .btn-ghost{width:100%; justify-content:center; margin-left:0!important; order:3;}
+    .rating-score{font-size:2.6rem;}
+    .review-card{flex:0 0 84vw; padding:24px 20px;}
+    .reviews-arrow{display:none;}
+
+    /* instagram */
+    .insta-head{gap:18px;}
+    .insta-head .btn{width:100%; justify-content:center;}
+    .insta-grid{grid-template-columns:repeat(2,1fr);}
+    .insta-followers{margin-left:0;}
+
+    /* cta final */
+    .cta-final{padding:90px 0;}
+    .cta-final .btn{width:100%; justify-content:center; padding:18px 28px!important;}
+
+    /* localização */
+    .loc-grid{gap:34px;}
+    .loc-info .btn{width:100%; justify-content:center;}
+
+    /* footer */
+    .footer-top{grid-template-columns:1fr; gap:32px;}
+    .footer-bottom{flex-direction:column; align-items:flex-start; gap:6px;}
+
+    /* whatsapp flutuante */
+    .wa-float{width:52px; height:52px; right:16px; bottom:16px;}
+    .wa-float svg{width:24px; height:24px;}
+  }
+
+  @media (max-width:400px){
+    .hero-indicators{grid-template-columns:1fr;}
+    .hero-indicators .indicator:last-child{grid-column:auto;}
+    .review-card{flex:0 0 88vw;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#inicio" class="logo">MIÚDO<span>SUSPENSÕES</span></a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-primary" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20carro.">
+        Orçar pelo WhatsApp
+      </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#avaliacoes">Avaliações</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a class="btn btn-primary" target="_blank" rel="noopener"
+     href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20carro.">
+    Orçar pelo WhatsApp
+  </a>
+</div>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio" style="padding-top:140px;">
+    <div class="wrap hero-content">
+      <h1 class="reveal">Sua suspensão.<br>Seu estilo.</h1>
+      <p class="hero-sub reveal">Especialistas em suspensões, rebaixados e projetos especiais em Ribeirão Pires.</p>
+      <p class="hero-desc reveal">Do projeto à instalação, cuidamos da suspensão do seu carro com precisão e experiência.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">
+          Solicitar orçamento
+        </a>
+        <a class="btn btn-outline" href="#servicos">Conhecer serviços</a>
+      </div>
+      <div class="hero-indicators reveal">
+        <div class="indicator"><strong>★ 4,6</strong> no Google</div>
+        <div class="indicator"><strong>+3,5 mil</strong> seguidores</div>
+        <div class="indicator">Ribeirão Pires — SP</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT BAR ============ -->
+  <div class="impact-bar">
+    <div class="impact-track">
+      <span>Suspensão a ar</span><span>Rosca</span><span>Fixa</span><span>Importada</span><span>Projetos especiais</span>
+      <span>Suspensão a ar</span><span>Rosca</span><span>Fixa</span><span>Importada</span><span>Projetos especiais</span>
+    </div>
+  </div>
+
+  <!-- ============ ESPECIALISTAS ============ -->
+  <section class="especialistas" id="sobre">
+    <div class="wrap grid-split">
+      <div class="reveal">
+        <span class="eyebrow">Especialistas em suspensão</span>
+        <h2>Não é só rebaixar.<br>É fazer do jeito certo.</h2>
+        <p>Cada carro tem uma necessidade diferente. Na Miúdo Suspensões, trabalhamos com diferentes soluções de suspensão para entregar o resultado que combina com seu projeto, seu estilo e seu uso.</p>
+        <div class="badge">
+          <b>MIÚDO SUSPENSÕES</b>
+          <span>RIBEIRÃO PIRES — SP</span>
+        </div>
+      </div>
+      <div class="img-frame reveal">
+        <img src="imagens/imagem-2.jpg" alt="Detalhe de suspensão em carro rebaixado - Miúdo Suspensões" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section class="servicos" id="servicos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Serviços</span>
+        <h2>Soluções para o seu projeto</h2>
+        <p>Escolha a configuração que combina com o seu carro.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+    <div class="cards-grid reveal">
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Tenho%20interesse%20em%20suspens%C3%A3o%20a%20ar%20e%20gostaria%20de%20saber%20mais.">
+        <svg class="card-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg>
+        <h3>Suspensão a ar</h3>
+        <p>Conforto, ajuste de altura e presença para projetos personalizados.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Tenho%20interesse%20em%20suspens%C3%A3o%20de%20rosca%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M12 3v18M8 5l4-2 4 2M8 19l4 2 4-2"/></svg>
+        <h3>Suspensão de rosca</h3>
+        <p>Regulagem de altura para quem busca um projeto personalizado.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Tenho%20interesse%20em%20suspens%C3%A3o%20fixa%20e%20gostaria%20de%20saber%20mais.">
+        <svg class="card-icon" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14"/></svg>
+        <h3>Suspensão fixa</h3>
+        <p>Uma solução para quem busca um visual rebaixado com configuração definida.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20saber%20mais%20sobre%20suspens%C3%A3o%20original%20para%20meu%20carro.">
+        <svg class="card-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/></svg>
+        <h3>Suspensão original</h3>
+        <p>Manutenção e soluções para preservar as características originais do veículo.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20saber%20mais%20sobre%20suspens%C3%B5es%20importadas.">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+        <h3>Suspensões importadas</h3>
+        <p>Soluções e componentes importados para projetos específicos.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20saber%20mais%20sobre%20ponta%20de%20eixo.">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M4 12h16M8 6v12M16 6v12"/></svg>
+        <h3>Ponta de eixo</h3>
+        <p>Serviços especializados para projetos que exigem adaptação e precisão.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20saber%20mais%20sobre%20chapeamento.">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z M4 10h16 M10 4v16"/></svg>
+        <h3>Chapeamento</h3>
+        <p>Serviços de chapeamento relacionados aos projetos de suspensão.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20especial%20para%20meu%20carro.">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M12 2l2.6 6.2L21 9l-5 4.5 1.4 6.5L12 16.8 6.6 20l1.4-6.5L3 9l6.4-.8z"/></svg>
+        <h3>Projetos especiais</h3>
+        <p>Projetos personalizados desenvolvidos conforme o veículo e o objetivo do cliente.</p>
+        <span class="card-arrow">Falar no WhatsApp →</span>
+      </a>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- ============ VISUAL IMPACT ============ -->
+  <section class="visual-impact">
+    <div class="reveal">
+      <h2>Seu carro.<br>Seu projeto.</h2>
+      <p>Suspensões para quem leva o projeto a sério.</p>
+      <a class="btn btn-primary" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">
+        Fale com a Miúdo
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ COMO FUNCIONA ============ -->
+  <section class="como-funciona">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Do papo ao projeto pronto</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Converse</h3>
+          <p>Conte o que você pretende fazer no seu carro.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Defina o projeto</h3>
+          <p>Encontramos a solução de suspensão mais adequada ao projeto.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Execute</h3>
+          <p>Seu projeto é realizado com atenção aos detalhes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETOS STRIP ============ -->
+  <section class="projetos-strip" style="padding:0;">
+    <div class="projetos-grid reveal">
+      <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener">
+        <img src="imagens/imagem-5.jpg" alt="Projeto de suspensão executado pela Miúdo Suspensões" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener">
+        <img src="imagens/imagem-6.jpg" alt="Carro rebaixado finalizado pela Miúdo Suspensões" loading="lazy">
+      </a>
+    </div>
+  </section>
+
+<!-- ============ PROVA SOCIAL ============ -->
+<section class="prova-social" id="avaliacoes">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <span class="eyebrow">Avaliações</span>
+      <h2>Quem conhece, recomenda.</h2>
+    </div>
+
+    <div class="rating-block reveal">
+
+      <div class="rating-score">4,6</div>
+
+      <div class="rating-meta">
+        <span class="stars">★★★★★</span>
+        <span>11 avaliações no Google</span>
+      </div>
+
+      <a
+        class="btn btn-ghost"
+        style="margin-left:auto;"
+        target="_blank"
+        rel="noopener"
+        href="https://www.google.com/search?q=Mi%C3%BAdo+Suspens%C3%B5es+Ribeir%C3%A3o+Pires">
+        Ver no Google
+      </a>
+
+    </div>
+
+
+    <!-- CARROSSEL DE AVALIAÇÕES -->
+    <div class="reviews-carousel reveal">
+
+      <button
+        class="reviews-arrow prev"
+        id="reviewsPrev"
+        aria-label="Avaliação anterior">
+        ‹
+      </button>
+
+      <div class="reviews-track" id="reviewsTrack">
+
+
+        <!-- AVALIAÇÃO 1 -->
+        <div class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-author">
+
+              <div class="review-avatar">
+                A
+              </div>
+
+              <div>
+                <div class="review-name">
+                  Cliente do Google
+                </div>
+
+                <div class="review-google">
+                  Google
+                </div>
+              </div>
+
+            </div>
+
+            <div class="review-google-logo">
+              G
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            Ótimo profissional e bons preços.
+          </p>
+
+          <span class="review-source">
+            Avaliação publicada no Google
+          </span>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO 2 -->
+        <div class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-author">
+
+              <div class="review-avatar">
+                M
+              </div>
+
+              <div>
+                <div class="review-name">
+                  Cliente do Google
+                </div>
+
+                <div class="review-google">
+                  Google
+                </div>
+              </div>
+
+            </div>
+
+            <div class="review-google-logo">
+              G
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            O Miúdo é muito gente boa e super profissional.
+          </p>
+
+          <span class="review-source">
+            Avaliação publicada no Google
+          </span>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO 3 -->
+        <div class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-author">
+
+              <div class="review-avatar">
+                C
+              </div>
+
+              <div>
+                <div class="review-name">
+                  Cliente do Google
+                </div>
+
+                <div class="review-google">
+                  Google
+                </div>
+              </div>
+
+            </div>
+
+            <div class="review-google-logo">
+              G
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            Ótimo atendimento e bom preços.
+          </p>
+
+          <span class="review-source">
+            Avaliação publicada no Google
+          </span>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO 4 -->
+        <div class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-author">
+
+              <div class="review-avatar">
+                G
+              </div>
+
+              <div>
+                <div class="review-name">
+                  Cliente do Google
+                </div>
+
+                <div class="review-google">
+                  Google
+                </div>
+              </div>
+
+            </div>
+
+            <div class="review-google-logo">
+              G
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            Excelente atendimento e serviço.
+          </p>
+
+          <span class="review-source">
+            Avaliação publicada no Google
+          </span>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO 5 -->
+        <div class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-author">
+
+              <div class="review-avatar">
+                R
+              </div>
+
+              <div>
+                <div class="review-name">
+                  Cliente do Google
+                </div>
+
+                <div class="review-google">
+                  Google
+                </div>
+              </div>
+
+            </div>
+
+            <div class="review-google-logo">
+              G
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            Serviço de qualidade e atendimento muito bom.
+          </p>
+
+          <span class="review-source">
+            Avaliação publicada no Google
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <button
+        class="reviews-arrow next"
+        id="reviewsNext"
+        aria-label="Próxima avaliação">
+        ›
+      </button>
+
+    </div>
+
+
+    <!-- CONTROLES -->
+    <div class="reviews-controls reveal">
+
+      <span class="reviews-hint">
+        ← Arraste para ver mais avaliações →
+      </span>
+
+      <div class="reviews-dots" id="reviewsDots">
+        <span class="reviews-dot active"></span>
+        <span class="reviews-dot"></span>
+        <span class="reviews-dot"></span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <section class="instagram">
+    <div class="wrap">
+      <div class="insta-head reveal">
+        <div>
+          <span class="eyebrow">Instagram</span>
+          <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem); margin-top:8px;">Acompanhe nossos projetos</h2>
+          <p style="color:var(--steel); margin-top:14px; max-width:440px;">Veja carros, projetos e trabalhos da Miúdo Suspensões no Instagram.</p>
+        </div>
+        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.instagram.com/miudosuspensoes_/">
+          Ver Instagram
+        </a>
+      </div>
+
+      <div class="insta-handle reveal" style="margin-bottom:22px;">
+        <svg class="insta-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        <span>@miudosuspensoes_</span>
+        <span class="insta-followers">+3.500 seguidores</span>
+      </div>
+
+      <div class="insta-grid reveal">
+        <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener"><img src="imagens/instagram-1.jpg" alt="Projeto Miúdo Suspensões no Instagram" loading="lazy"></a>
+        <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener"><img src="imagens/instagram-2.jpg" alt="Projeto Miúdo Suspensões no Instagram" loading="lazy"></a>
+        <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener"><img src="imagens/instagram-3.jpg" alt="Projeto Miúdo Suspensões no Instagram" loading="lazy"></a>
+        <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener"><img src="imagens/instagram-4.jpg" alt="Projeto Miúdo Suspensões no Instagram" loading="lazy"></a>
+        <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener"><img src="imagens/instagram-5.jpg" alt="Projeto Miúdo Suspensões no Instagram" loading="lazy"></a>
+        <a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener"><img src="imagens/instagram-6.jpg" alt="Projeto Miúdo Suspensões no Instagram" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="cta-final" id="contato">
+    <div class="wrap reveal">
+      <h2>Vamos dar o próximo passo no seu projeto?</h2>
+      <p>Fale com a Miúdo Suspensões e explique o que você quer fazer no seu carro.</p>
+      <a class="btn btn-primary" style="padding:20px 42px; font-size:1rem;" target="_blank" rel="noopener"
+         href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">
+        Chamar no WhatsApp
+      </a>
+      <p class="phone">(11) 94741-4431</p>
+    </div>
+  </section>
+
+  <!-- ============ LOCALIZAÇÃO ============ -->
+  <section class="localizacao">
+    <div class="wrap loc-grid">
+      <div class="reveal loc-info">
+        <span class="eyebrow">Localização</span>
+        <h2 style="margin-top:10px;">Onde estamos</h2>
+        <address>
+          R. Francisco Tometich — Jardim Valentina<br>
+          Ribeirão Pires — SP<br>
+          09412-190
+        </address>
+        <a class="btn btn-outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=R.+Francisco+Tometich+Jardim+Valentina+Ribeir%C3%A3o+Pires+SP+09412-190">
+          Abrir no Google Maps
+        </a>
+      </div>
+      <div class="map-frame reveal">
+        <iframe
+          src="https://www.google.com/maps?q=R.+Francisco+Tometich,+Jardim+Valentina,+Ribeir%C3%A3o+Pires+-+SP,+09412-190&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa - Miúdo Suspensões">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">MIÚDO SUSPENSÕES</div>
+        <p>Suspensões, rebaixados e projetos especiais em Ribeirão Pires — SP.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5511947414431" target="_blank" rel="noopener">(11) 94741-4431</a></li>
+          <li><a href="https://www.instagram.com/miudosuspensoes_/" target="_blank" rel="noopener">@miudosuspensoes_</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=R.+Francisco+Tometich+Jardim+Valentina+Ribeir%C3%A3o+Pires+SP" target="_blank" rel="noopener">Localização</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Miúdo Suspensões. Todos os direitos reservados.</span>
+      <span>Ribeirão Pires — SP</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a class="wa-float" target="_blank" rel="noopener"
+   href="https://wa.me/5511947414431?text=Ol%C3%A1%2C%20Mi%C3%BAdo%20Suspens%C3%B5es!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
+   aria-label="Chamar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.26-1.38a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.05c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.98 0-1.41.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+
+<script>
+(function(){
+  // Header blur on scroll
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(window.scrollY > 40){ header.classList.add('scrolled'); }
+    else { header.classList.remove('scrolled'); }
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Mobile menu
+  var hamburger = document.getElementById('hamburgerBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function(){
+    mobileNav.classList.toggle('open');
+  });
+  mobileNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mobileNav.classList.remove('open'); });
+  });
+
+  // Reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+  // Google Reviews Carousel
+  var reviewsTrack = document.getElementById('reviewsTrack');
+  var reviewsPrev = document.getElementById('reviewsPrev');
+  var reviewsNext = document.getElementById('reviewsNext');
+  var reviewsDots = document.querySelectorAll('.reviews-dot');
+
+  if(reviewsTrack){
+
+    var reviewCards = reviewsTrack.querySelectorAll('.review-card');
+    var isDown = false;
+    var startX;
+    var scrollStart;
+
+    function getCardWidth(){
+      if(!reviewCards.length) return 380;
+
+      var card = reviewCards[0];
+      var style = window.getComputedStyle(reviewsTrack);
+      var gap = parseFloat(style.columnGap || style.gap) || 20;
+
+      return card.offsetWidth + gap;
+    }
+
+    function updateReviewDots(){
+
+      if(!reviewsDots.length) return;
+
+      var position = reviewsTrack.scrollLeft;
+      var width = getCardWidth();
+
+      var index = Math.round(position / width);
+
+      reviewsDots.forEach(function(dot, i){
+        dot.classList.toggle('active', i === index);
+      });
+
+    }
+
+    reviewsNext.addEventListener('click', function(){
+
+      reviewsTrack.scrollBy({
+        left:getCardWidth(),
+        behavior:'smooth'
+      });
+
+    });
+
+    reviewsPrev.addEventListener('click', function(){
+
+      reviewsTrack.scrollBy({
+        left:-getCardWidth(),
+        behavior:'smooth'
+      });
+
+    });
+
+
+    // Mouse drag
+    reviewsTrack.addEventListener('mousedown', function(e){
+
+      isDown = true;
+      reviewsTrack.classList.add('dragging');
+
+      startX = e.pageX - reviewsTrack.offsetLeft;
+      scrollStart = reviewsTrack.scrollLeft;
+
+    });
+
+    reviewsTrack.addEventListener('mouseleave', function(){
+
+      isDown = false;
+      reviewsTrack.classList.remove('dragging');
+
+    });
+
+    reviewsTrack.addEventListener('mouseup', function(){
+
+      isDown = false;
+      reviewsTrack.classList.remove('dragging');
+
+    });
+
+    reviewsTrack.addEventListener('mousemove', function(e){
+
+      if(!isDown) return;
+
+      e.preventDefault();
+
+      var x = e.pageX - reviewsTrack.offsetLeft;
+      var walk = (x - startX) * 1.5;
+
+      reviewsTrack.scrollLeft = scrollStart - walk;
+
+    });
+
+
+    // Atualiza indicadores
+    reviewsTrack.addEventListener('scroll', function(){
+
+      window.requestAnimationFrame(updateReviewDots);
+
+    }, {passive:true});
+
+
+    // Impede que o clique aconteça depois de arrastar
+    reviewsTrack.addEventListener('dragstart', function(e){
+
+      e.preventDefault();
+
+    });
+
+
+    updateReviewDots();
+
+  }
+})();
+
+</script>
+
+</body>
+</html>
